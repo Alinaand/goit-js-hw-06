@@ -6,17 +6,16 @@ const ingredients = [
   'Herbs',
   'Condiments',
 ];
-const ListItemIngr =[]
-ingredients.forEach((element,index)=>{
+const makeListItemIngr = elements =>
+ { return elements.map((element)=>{
   const listEl=document.createElement('li');
   listEl.classList.add('item');
-  listEl.textContent = ingredients[index];
-  ListItemIngr.push(listEl)
-  ;
+  listEl.textContent = element;
+  return listEl;
   }
-
-)
-console.log(ListItemIngr)
+);
+}
+const ListItemIngr = makeListItemIngr(ingredients);
 const  listIngr = document.querySelector('ul');
   console.log(listIngr);
   listIngr.append(...ListItemIngr);

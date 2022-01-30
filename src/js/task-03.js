@@ -12,3 +12,13 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+const galEl = document.querySelector('ul');
+const makeGaltEl = element=>{
+  const{ url,alt} = element;
+  return `<li>
+  <img alt = ${alt} src = ${url}></img>
+  </li>`
+}
+const makeListGalEl = images.map(makeGaltEl);
+galEl.insertAdjacentHTML('afterbegin',makeListGalEl)
+console.log(makeListGalEl)
