@@ -19,6 +19,6 @@ const makeGaltEl = element=>{
   <img alt = ${alt} src = ${url}></img>
   </li>`
 }
-const makeListGalEl = images.map(makeGaltEl);
+const makeListGalEl = images.map(makeGaltEl).join();
 galEl.insertAdjacentHTML('afterbegin',makeListGalEl)
 console.log(makeListGalEl)
