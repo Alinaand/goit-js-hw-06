@@ -3,12 +3,17 @@ const btnDecr = document.querySelector('[data-action="decrement"]');
 const btnIncr = document.querySelector('[data-action="increment"]');
 const value = document.querySelector('#value');
 
-const onBtnClick = (num) => {
-   counterValue += num; 
+const onBtnDecrClick = () => {
+   counterValue -= 1; 
     value.textContent = counterValue;
    };
-btnDecr.addEventListener('click',()=> onBtnClick (-1));
-btnIncr.addEventListener("click",() => onBtnClick (+1));
+   const onBtnIncrClick = () => {
+      counterValue += 1; 
+       value.textContent = counterValue;
+      };
+
+btnDecr.addEventListener('click', onBtnDecrClick );
+btnIncr.addEventListener("click", onBtnIncrClick);
 
 
 
