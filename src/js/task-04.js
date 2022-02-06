@@ -7,7 +7,7 @@ const onBtnClick = (num) => {
    counterValue += num; 
     value.textContent = counterValue;
    };
-btnDecr.addEventListener("click",()=> onBtnClick (-1));
+btnDecr.addEventListener('click',()=> onBtnClick (-1));
 btnIncr.addEventListener("click",() => onBtnClick (+1));
 
 
