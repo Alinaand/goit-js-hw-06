@@ -4,11 +4,14 @@ function getRandomHexColor() {
 const btnCreate=document.querySelector('[data-create]');
 const btnDestroy=document.querySelector('[data-destroy]')
 const inpAmount=document.querySelector('input')
-console.log(inpAmount)
-inpAmount.addEventListener('input',(event)=>{
- const amount=event.currentTarget.value
-  console.log(amount)
-  return amount
+console.dir(inpAmount)
+let amount=0;
+btnCreate.addEventListener('click',(event)=>{
+  console.log('ghbdtn')
+  inpAmount.addEventListener('input', (e)=>{ let amount = e.currentTarget.value;})
+
+  console.dir(amount)
+
 })
 
 console.log(amount)
