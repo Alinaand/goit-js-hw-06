@@ -1,26 +1,15 @@
-// function getRandomHexColor() {
-//   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-// }
-// const btnCreate=document.querySelector('[data-create]');
-// const btnDestroy=document.querySelector('[data-destroy]')
-// const inpAmount=document.querySelector('input')
-<<<<<<< Updated upstream
-// console.dir(inpAmount)
-// let amount=0;
-// btnCreate.addEventListener('click',(event)=>{
-//   console.log('ghbdtn')
-//   inpAmount.addEventListener('input', (e)=>{ let amount = e.currentTarget.value;})
-
-//   console.dir(amount)
-
-=======
-// console.log(inpAmount)
-// inpAmount.addEventListener('input',(event)=>{
-//  const amount=event.currentTarget.value
-//   console.log(amount)
-//   return amount
->>>>>>> Stashed changes
-// })
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+}
+const btnCreate=document.querySelector('[data-create]');
+const btnDestroy=document.querySelector('[data-destroy]')
+const inpAmount=document.querySelector('input')
+console.log(inpAmount)
+inpAmount.addEventListener('input',(event)=>{
+ const amount=inpAmount.value
+  console.log(amount)
+  return amount
+})
 
 // console.log(amount)
 // function createBoxes(amount){

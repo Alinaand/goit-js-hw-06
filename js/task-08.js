@@ -6,12 +6,13 @@ function onFormSubmit(e){
     e.preventDefault();
     const email = e.currentTarget.elements.email.value;
     const password = e.currentTarget.elements.password.value;
+    if(email === ""|| password ===""){ 
+        return alert("Please fill in all the fields!");};
     const formData ={
         email,
         password,
     };
     console.log(formData);
-    if(email === ""|| password ===""){ 
-    return alert("Please fill in all the fields!");};
+    
 e.currentTarget.reset(); 
 }
