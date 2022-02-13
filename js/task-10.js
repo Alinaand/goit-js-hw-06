@@ -2,32 +2,35 @@ function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
 const btnCreate=document.querySelector('[data-create]');
-const btnDestroy=document.querySelector('[data-destroy]')
+const btnDestroy=document.querySelector('[data-destroy]');
 const inpAmount=document.querySelector('input');
-const boxDiv=document.querySelector('#boxes')
-console.log(inpAmount)
-inpAmount.addEventListener('input',(e)=>{
- 
+const boxDiv=document.querySelector('#boxes');
 
-const amount = inpAmount.value;
-  
-
-})
-console.log(amount)
-
+const getAmount =()=>{
+  const amount = inpAmount.value;
+  createBoxes(amount);
+}
+btnCreate.addEventListener('click', getAmount);
+btnDestroy.addEventListener('click',destroyBoxes);
 function createBoxes(amount){
   const boxesColor=[];
   for (let i = 0; i < amount;i+=1){ 
   const box = document.createElement('div');
+  let size = `${30 + (i*10)}px`
   box.classList.add('boxes');
-  box.style.height=`30px+${i*10}`;
-  box.style.width=`30px+${i*10}`;
-  box.style.color=getRandomHexColor();
-boxesColor.push(box)}
-console.dir(boxesColor)
-return boxesColor
-
+  box.style.height =size;
+  box.style.width =size;
+  box.style.marginLeft = `${i*10}px`
+  box.style.backgroundColor=getRandomHexColor();
+  box.style.display='block';
+  console.log(box.style.height)
+boxesColor.push(box)};
+console.dir(boxesColor);
+boxDiv.append(...boxesColor);
 }
-createBoxes(amount)
-// boxDiv.append(...boxesColor)
-btnCreate.addEventListener('click',createBoxes())
+function destroyBoxes(){
+ boxDiv.innerHTML ='';
+ inpAmount.value = ''; 
+}
+
+
